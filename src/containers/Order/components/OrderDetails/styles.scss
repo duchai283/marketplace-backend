@@ -1,0 +1,240 @@
+.order-dt {
+  &__number {
+    color: #83b151;
+    font-size: 36px;
+  }
+
+  &__date {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #40485a;
+  }
+  &__text {
+    color: #495057;
+    font-weight: bold;
+    font-size: 22;
+  }
+  &__status {
+    display: flex;
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  &__track {
+    color: #2d9cdb;
+    background: rgba(45, 156, 219, 0.1);
+    border: 1px solid #2d9cdb;
+    margin-left: 10px;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 4px 7px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__cancel {
+    color: red;
+    margin-right: 10px;
+    padding-top: 5px;
+    cursor: pointer;
+  }
+}
+
+.order {
+  &-status {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 5px !important;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  &_accepted {
+    background-color: lightseagreen;
+  }
+  &_cancelled {
+    background-color: red;
+  }
+  &_fulfilled {
+    background-color: royalblue;
+  }
+  &_delivery {
+    background-color: orange;
+  }
+  &_completed {
+    background-color: #28a745;
+  }
+}
+
+.table {
+  border-spacing: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 22px;
+  min-width: 890px;
+}
+
+.table-cell div {
+  font-size: 12px;
+  padding: 12px 20px 12px 10px !important;
+}
+.table-row {
+  height: 60px;
+  border: 1px solid #eff0f5;
+  border-width: 0 0 1px;
+}
+td {
+  border: 1px solid #eff0f5;
+  border-width: 0 0 1px;
+}
+.table-header {
+  font-size: 12px;
+  padding: 12px 0 12px 10px !important;
+}
+.table th {
+  padding: 0;
+  background: #fafafa;
+  color: #757575;
+  text-align: left;
+  font-weight: 400;
+  border: 1px solid #eff0f5;
+  border-width: 0 0 1px;
+}
+th {
+  border-width: 0 0 1px;
+}
+
+.track-order {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff;
+  min-height: 500px;
+  padding: 20px;
+  margin-bottom: 400px;
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  &__number {
+    & span {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #67823a;
+    }
+  }
+  &__head {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #67823a;
+  }
+  &__steps {
+    border: 0 !important;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+  &__timeline {
+    height: 5px;
+    border-radius: 7px;
+    background: #e7e8eb;
+    position: relative;
+    &-completion {
+      height: 5px;
+      margin: 1px;
+      border-radius: 5px;
+      background: #72a230;
+    }
+  }
+  &__step {
+    position: absolute;
+    background-color: #e7e8eb;
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+    background-size: contain;
+    margin-top: -25px;
+    &-status {
+      position: absolute;
+      bottom: -20px;
+      white-space: nowrap;
+      left: -10px;
+    }
+    &__accepted-active,
+    &__ready-active,
+    &__delivered-active,
+    &__completed-active {
+      background-color: #72a230;
+    }
+  }
+}
+.ready {
+  left: 30%;
+}
+.delivered {
+  left: 60%;
+}
+.completed {
+  right: 0;
+}
+
+.accepted__icon {
+  position: absolute;
+  z-index: 999;
+  left: 6px;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: #a7abb2;
+  mask: url('/accepted.svg') no-repeat 80% 10%;
+}
+.ready__icon {
+  position: absolute;
+  z-index: 999;
+  left: 6px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #a7abb2;
+  mask: url('/being_fulfilled.svg') no-repeat 80% 10%;
+}
+
+.delivered__icon {
+  position: absolute;
+  z-index: 999;
+  left: 6px;
+  top: 12px;
+  height: 30px;
+  width: 30px;
+  background-color: #a7abb2;
+  mask: url('/delivery.svg') no-repeat 80% 10%;
+  mask-size: 98%;
+}
+
+.completed__icon {
+  position: absolute;
+  z-index: 999;
+  left: 5px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #a7abb2;
+  mask: url('/completed.svg') no-repeat 80% 10%;
+  mask-size: 80%;
+}
+.accepted-active,
+.ready-active,
+.delivered-active,
+.completed-active {
+  background-color: #fff;
+}
